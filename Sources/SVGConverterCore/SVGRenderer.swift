@@ -23,19 +23,25 @@ public final class SVGRenderer: WKWebView, WKNavigationDelegate {
 
     // MARK: - Private Properties
 
+    private let allowViewBoxFix: Bool
+    private let quiet: Bool
     private var completion: ((Result<Data, Error>) -> Void)?
     private var isRendering = false
     private var size: CGSize = .zero
 
     // MARK: - Life cycle
 
-    public init() {
+    public init(allowViewBoxFix: Bool = true, quiet: Bool = false) {
+        self.allowViewBoxFix = allowViewBoxFix
+        self.quiet = quiet
         super.init(frame: .zero, configuration: SVGRenderer.rendererConfiguration)
         navigationDelegate = self
     }
 
     @available(*, unavailable)
     required public init?(coder: NSCoder) {
+        self.allowViewBoxFix = true
+        self.quiet = false
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -128,6 +134,19 @@ public final class SVGRenderer: WKWebView, WKNavigationDelegate {
             svgElement.name == "svg"
         else { throw InternalError.invalidSVGData }
 
+        if svgElement.attribute(forName: "viewBox") == nil {
+            if
+                allowViewBoxFix,
+                let width = svgElement.attribute(forName: "width")?.stringValue.flatMap(Double.init),
+                let height = svgElement.attribute(forName: "height")?.stringValue.flatMap(Double.init)
+            {
+                printWarning("Missing viewBox in svg file, one was guessed using width and height")
+                svgElement.set(value: "0 0 \(width) \(height)", for: "viewBox")
+            } else {
+                printWarning("Missing viewBox in svg file, the svg will not be resized")
+            }
+        }
+
         svgElement.set(value: "\(size.width)", for: "width")
         svgElement.set(value: "\(size.height)", for: "height")
         return document.xmlData()
@@ -140,6 +159,11 @@ public final class SVGRenderer: WKWebView, WKNavigationDelegate {
         <body>\(svg)</body>
         </html>
         """
+    }
+
+    private func printWarning(_ message: String) {
+        guard !quiet else { return }
+        FileHandle.standardError.write(Data("[Warning] \(message)\n".utf8))
     }
 
     private func didComplete(with result: Result<Data, Error>) {
