@@ -1,0 +1,279 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16SVGConverterCore11SVGRendererC13ConfigurationV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Configuration"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SVGConverterCore"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Configuration"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "SVGRenderer.Configuration"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Configuration"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/init(allowFixingMissingViewBox:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/allowFixingMissingViewBox"
+      ],
+      "title" : "Instance Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/svgconvertercore\/svgrenderer\/configuration"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://SVGConverterCore/documentation/SVGConverterCore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SVGConverterCore",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderer"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderer"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderer",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Configuration"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Configuration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderer.Configuration",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration/allowFixingMissingViewBox": {
+  "abstract" : [
+    {
+      "text" : "Controls wether or not the renderer will try to add viewBox attribute to SVG without one",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowFixingMissingViewBox"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/allowFixingMissingViewBox",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowFixingMissingViewBox",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/allowfixingmissingviewbox"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration/init(allowFixingMissingViewBox:)": {
+  "abstract" : [
+    {
+      "text" : "Create a configuration for SVGRenderer",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "allowFixingMissingViewBox"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/init(allowFixingMissingViewBox:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(allowFixingMissingViewBox:)",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/init(allowfixingmissingviewbox:)"
+}
+}
+}

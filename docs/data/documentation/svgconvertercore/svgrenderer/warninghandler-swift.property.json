@@ -1,0 +1,333 @@
+{
+  "abstract" : [
+    {
+      "text" : "Receives warnings detected by the renderer. Set it to ",
+      "type" : "text"
+    },
+    {
+      "code" : "nil",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to ignore those warnings",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/warningHandler-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16SVGConverterCore11SVGRendererC14warningHandleryAA20SVGRenderingWarningsVcSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "warningHandler"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC",
+        "text" : "SVGRenderer"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC14WarningHandlera",
+        "text" : "WarningHandler"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SVGConverterCore"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "warningHandler"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "warningHandler"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC",
+              "text" : "SVGRenderer"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/WarningHandler-swift.typealias",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC14WarningHandlera",
+              "text" : "WarningHandler"
+            },
+            {
+              "kind" : "text",
+              "text" : "? { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "set"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "By default to ",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/svgconvertercore\/svgrenderer\/warninghandler-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://SVGConverterCore/documentation/SVGConverterCore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SVGConverterCore",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "class"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderer"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderer"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderer",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/WarningHandler-swift.typealias": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "WarningHandler"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/WarningHandler-swift.typealias",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "WarningHandler"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderer.WarningHandler",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/warninghandler-swift.typealias"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/warningHandler-swift.property": {
+  "abstract" : [
+    {
+      "text" : "Receives warnings detected by the renderer. Set it to ",
+      "type" : "text"
+    },
+    {
+      "code" : "nil",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to ignore those warnings",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "warningHandler"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC",
+      "text" : "SVGRenderer"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16SVGConverterCore11SVGRendererC14WarningHandlera",
+      "text" : "WarningHandler"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/warningHandler-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "warningHandler",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/warninghandler-swift.property"
+}
+}
+}

@@ -1,0 +1,386 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16SVGConverterCore17SVGRenderingErrorO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "SVGRenderingError"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SVGConverterCore"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "SVGRenderingError"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "SVGRenderingError"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "SVGRenderingError"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/SQ",
+        "doc:\/\/SVGConverterCore\/s5ErrorP",
+        "doc:\/\/SVGConverterCore\/SH",
+        "doc:\/\/SVGConverterCore\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/cgImageConversionFailed",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidSVGData",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidState",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/pngImageConversionFailed",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/renderingAlreadyInProgress"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/localizedDescription-81v18"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/Equatable-Implementations",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/Error-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/svgconvertercore\/svgrenderingerror"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://SVGConverterCore/SH": {
+  "identifier" : "doc:\/\/SVGConverterCore\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://SVGConverterCore/SQ": {
+  "identifier" : "doc:\/\/SVGConverterCore\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SVGConverterCore",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderingError"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderingError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderingError",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/equatable-implementations"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/Error-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/Error-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Error Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/error-implementations"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/cgImageConversionFailed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cgImageConversionFailed"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/cgImageConversionFailed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.cgImageConversionFailed",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/cgimageconversionfailed"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/invalidSVGData": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidSVGData"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidSVGData",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.invalidSVGData",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/invalidsvgdata"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/invalidState": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invalidState"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidState",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.invalidState",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/invalidstate"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/localizedDescription-81v18": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "localizedDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/localizedDescription-81v18",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "localizedDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/localizeddescription-81v18"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/pngImageConversionFailed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pngImageConversionFailed"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/pngImageConversionFailed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.pngImageConversionFailed",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/pngimageconversionfailed"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/renderingAlreadyInProgress": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "renderingAlreadyInProgress"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/renderingAlreadyInProgress",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.renderingAlreadyInProgress",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/renderingalreadyinprogress"
+},
+"doc://SVGConverterCore/s5ErrorP": {
+  "identifier" : "doc:\/\/SVGConverterCore\/s5ErrorP",
+  "title" : "Swift.Error",
+  "type" : "unresolvable"
+},
+"doc://SVGConverterCore/s8SendableP": {
+  "identifier" : "doc:\/\/SVGConverterCore\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
