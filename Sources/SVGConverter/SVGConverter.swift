@@ -33,8 +33,16 @@ struct SVGConverter: AsyncParsableCommand {
 
     func run() async throws {
         let svgData = try Data(contentsOf: inputPath)
-        let renderer = await SVGRenderer(allowViewBoxFix: !preventMissingViewBoxFix, quiet: quiet)
+        let configuration = SVGRenderer.Configuration(allowFixingMissingViewBox: !preventMissingViewBoxFix)
+        let renderer = SVGRenderer(
+            configuration: configuration,
+            warningHandler: quiet ? nil : logWarning
+        )
         let pngData = try await renderer.render(svgData: svgData, size: CGSize(width: width, height: height))
         try pngData.write(to: outputPath)
     }
+}
+
+func logWarning(_ warning: SVGRenderingWarnings) {
+    FileHandle.standardError.write(Data("[Warning] \(warning.localizedDescription)\n".utf8))
 }
