@@ -11,6 +11,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
         .executableTarget(
@@ -23,6 +24,15 @@ let package = Package(
         .target(
             name: "SVGConverterCore",
             dependencies: []
+        ),
+        .testTarget(
+            name: "SVGConverterCoreTests",
+            dependencies: [
+                "SVGConverterCore",
+                .product(name: "SnapshotTesting", package: "swift-snapshot-testing")
+            ],
+            exclude: ["__Snapshots__"],
+            resources: [.copy("input_files")]
         )
     ]
 )

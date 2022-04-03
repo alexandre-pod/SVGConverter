@@ -1,0 +1,5 @@
+<svg width="3" height="3" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <title>Layer 1</title>
+  <rect x="0" y="0" width="3" height="3" fill="red"></rect>
+  <rect x="1" y="1" width="1" height="1" fill="blue"></rect>
+</svg>
