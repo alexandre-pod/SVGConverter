@@ -45,6 +45,7 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
         self.allowFixingMissingViewBox = allowFixingMissingViewBox
         super.init(frame: .zero, configuration: WebViewSVGRenderer.rendererConfiguration)
         navigationDelegate = self
+        setValue(false, forKey: "drawsBackground")
     }
 
     @available(*, unavailable)
