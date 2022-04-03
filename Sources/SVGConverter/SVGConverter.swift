@@ -34,7 +34,7 @@ struct SVGConverter: AsyncParsableCommand {
     func run() async throws {
         let svgData = try Data(contentsOf: inputPath)
         let configuration = SVGRenderer.Configuration(allowFixingMissingViewBox: !preventMissingViewBoxFix)
-        let renderer = SVGRenderer(
+        let renderer = await SVGRenderer(
             configuration: configuration,
             warningHandler: quiet ? nil : logWarning
         )

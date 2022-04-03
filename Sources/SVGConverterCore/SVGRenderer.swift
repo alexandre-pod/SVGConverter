@@ -8,6 +8,7 @@
 import Foundation
 
 @available(macOS 10.15, *)
+@MainActor
 public final class SVGRenderer {
 
     // MARK: - Public typealiases
@@ -47,6 +48,7 @@ public final class SVGRenderer {
 
     // MARK: - Life cycle
 
+    @MainActor
     public init(
         configuration: Configuration = Configuration(),
         warningHandler: WarningHandler? = nil
