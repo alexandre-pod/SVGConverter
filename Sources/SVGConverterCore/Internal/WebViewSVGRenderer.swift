@@ -33,7 +33,8 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
     private let allowFixingMissingViewBox: Bool
     private var completion: ((Result<Data, Error>) -> Void)?
     private var isRendering = false
-    private var size: CGSize = .zero
+    private var inPixelSize: CGSize = .zero
+    private var inPointSize: CGSize = .zero
 
     // MARK: - Life cycle
 
@@ -54,11 +55,9 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
 
     // MARK: - SVGRenderer
 
-    @available(*, renamed: "render(svgString:svgSize:)")
     func render(
         svgData: Data,
         size: CGSize,
-        scale: CGFloat = 1.0,
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
         guard !isRendering else {
@@ -69,12 +68,13 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
         isRendering = true
         self.completion = completion
         let webViewScale = layer?.contentsScale ?? 1
-        self.size = NSSize(
-            width: scale * size.width / webViewScale,
-            height: scale * size.height / webViewScale
+        self.inPixelSize = size
+        self.inPointSize = NSSize(
+            width: size.width / webViewScale,
+            height: size.height / webViewScale
         )
         do {
-            let resizedSVGData = try resizeSVG(svgData, to: self.size)
+            let resizedSVGData = try resizeSVG(svgData, to: self.inPointSize)
             guard let svgString = String(data: resizedSVGData, encoding: .utf8) else {
                 throw SVGRenderingError.invalidState
             }
@@ -86,9 +86,9 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
     }
 
     @available(macOS 10.15, *)
-    func render(svgData: Data, size: CGSize, scale: CGFloat = 1.0) async throws -> Data {
+    func render(svgData: Data, size: CGSize) async throws -> Data {
         return try await withCheckedThrowingContinuation { continuation in
-            render(svgData: svgData, size: size, scale: scale) { result in
+            render(svgData: svgData, size: size) { result in
                 continuation.resume(with: result)
             }
         }
@@ -99,9 +99,17 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let config = WKSnapshotConfiguration()
         config.afterScreenUpdates = true
-        config.rect = NSRect(origin: .zero, size: size)
+        config.rect = NSRect(
+            origin: .zero,
+            size: NSSize(
+                width: inPointSize.width.rounded(.up),
+                height: inPointSize.height.rounded(.up)
+            )
+        )
 
-        webView.frame.size = size
+        webView.layer?.contentsScale = 1.0
+        webView.layer?.rasterizationScale = 0.1
+        webView.frame.size = config.rect.size
         webView.takeSnapshot(with: config) { [weak self] image, error in
             guard let self = self else { return }
             let snapshotResult = Result<NSImage, Error> {
@@ -115,11 +123,14 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
             }
 
             self.didComplete(with: snapshotResult.throwingMap { image in
-                guard let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else {
+                guard
+                    let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil),
+                    let resizedCGImage = cgImage.cropping(to: CGRect(origin: .zero, size: self.inPixelSize))
+                else {
                     throw SVGRenderingError.cgImageConversionFailed
                 }
-                let rep = NSBitmapImageRep(cgImage: cgImage)
-                rep.size = self.size
+                let rep = NSBitmapImageRep(cgImage: resizedCGImage)
+                rep.size = self.inPixelSize
                 guard let data = rep.representation(using: .png, properties: [:]) else {
                     throw SVGRenderingError.pngImageConversionFailed
                 }

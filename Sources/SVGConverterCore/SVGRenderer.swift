@@ -64,25 +64,22 @@ public final class SVGRenderer {
     /// Transform SVG Data to PNG data
     /// - Parameters:
     ///   - svgData: The SVG data to render
-    ///   - size: The size of the PNG returned by this method
-    ///   - scale: A multiplicator for the size of the output PNG
+    ///   - size: The size in pixel of the PNG returned by this method
     ///   - completion: The completion handler returning the rendered PNG or an error
     public func render(
         svgData: Data,
         size: CGSize,
-        scale: CGFloat = 1.0,
         completion: @escaping (Result<Data, Error>) -> Void
     ) {
-        renderer.render(svgData: svgData, size: size, scale: scale, completion: completion)
+        renderer.render(svgData: svgData, size: size, completion: completion)
     }
 
     /// Transform SVG Data to PNG data
     /// - Parameters:
     ///   - svgData: The SVG data to render
-    ///   - size: The size of the PNG returned by this method
-    ///   - scale: A multiplicator for the size of the output PNG
+    ///   - size: The size in pixel of the PNG returned by this method
     @available(macOS 10.15, *)
-    public func render(svgData: Data, size: CGSize, scale: CGFloat = 1.0) async throws -> Data {
-        return try await renderer.render(svgData: svgData, size: size, scale: scale)
+    public func render(svgData: Data, size: CGSize) async throws -> Data {
+        return try await renderer.render(svgData: svgData, size: size)
     }
 }
