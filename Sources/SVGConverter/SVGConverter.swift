@@ -28,12 +28,18 @@ struct SVGConverter: AsyncParsableCommand {
     @Flag(name: .customLong("no-svg-fix"), help: "Set this to true if you do not want this tool to automatically add a viewBox attribute if it is possible. Without viewBox the svg cannot be resized, but it can still be converted at its natural size")
     var preventMissingViewBoxFix: Bool = false
 
+    @Flag(name: .customLong("no-alpha-channel"), help: "When present the generated image will not contain an alpha channel")
+    var withoutAlphaChannel: Bool = false
+
     @Flag(help: "Setting this to true prevent any output in standard error output")
     var quiet: Bool = false
 
     func run() async throws {
         let svgData = try Data(contentsOf: inputPath)
-        let configuration = SVGRenderer.Configuration(allowFixingMissingViewBox: !preventMissingViewBoxFix)
+        let configuration = SVGRenderer.Configuration(
+            allowFixingMissingViewBox: !preventMissingViewBoxFix,
+            removePNGAlphaChannel: withoutAlphaChannel
+        )
         let renderer = await SVGRenderer(
             configuration: configuration,
             warningHandler: quiet ? nil : logWarning

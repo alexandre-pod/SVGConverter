@@ -24,10 +24,17 @@ public final class SVGRenderer {
         /// When at true, if there is no viewBox attribute in the SVG and the svg has a width and an height, it will add a viewBox attribute with the value `"0 0 width height"`
         public var allowFixingMissingViewBox: Bool
 
+        /// When this is true the renderer will produce an image without alpha channel
+        public var removePNGAlphaChannel: Bool
+
         /// Create a configuration for SVGRenderer
         /// - Parameter allowFixingMissingViewBox: Controls wether or not the renderer will try to add viewBox attribute to SVG without one
-        public init(allowFixingMissingViewBox: Bool = true) {
+        public init(
+            allowFixingMissingViewBox: Bool = true,
+            removePNGAlphaChannel: Bool = false
+        ) {
             self.allowFixingMissingViewBox = allowFixingMissingViewBox
+            self.removePNGAlphaChannel = removePNGAlphaChannel
         }
     }
 
@@ -53,7 +60,15 @@ public final class SVGRenderer {
         configuration: Configuration = Configuration(),
         warningHandler: WarningHandler? = nil
     ) {
-        self.renderer = WebViewSVGRenderer(allowFixingMissingViewBox: configuration.allowFixingMissingViewBox)
+
+        var options: WebViewSVGRenderer.Options = []
+        if !configuration.allowFixingMissingViewBox {
+            options.insert(.preventViewBoxFix)
+        }
+        if configuration.removePNGAlphaChannel {
+            options.insert(.removePNGAlphaChannel)
+        }
+        self.renderer = WebViewSVGRenderer(options: options)
 
         self.warningHandler = warningHandler
         self.renderer.warningHandler = warningHandler

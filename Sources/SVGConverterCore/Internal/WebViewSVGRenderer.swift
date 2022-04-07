@@ -20,6 +20,17 @@ private extension SVGRenderingWarnings {
 @available(macOS 10.15, *)
 final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
 
+    // MARK: - Public structures
+
+    struct Options: OptionSet {
+        let rawValue: Int
+
+        /// This option stop the renderer to try adding a viewBox attribute to svg that are lacking of it. Without viewBox the renderer is unable to resize the svg image.
+        static let preventViewBoxFix = Options(rawValue: 1<<0)
+        /// Tells the renderer to remove the alpha channel from the PNG image data
+        static let removePNGAlphaChannel = Options(rawValue: 1<<1)
+    }
+
     // MARK: - Public typealias
 
     typealias WarningHandler = (SVGRenderingWarnings) -> Void
@@ -30,7 +41,7 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
 
     // MARK: - Private Properties
 
-    private let allowFixingMissingViewBox: Bool
+    private let options: Options
     private var completion: ((Result<Data, Error>) -> Void)?
     private var isRendering = false
     private var inPixelSize: CGSize = .zero
@@ -41,8 +52,8 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
     /// An SVG renderer using a WebView to render the SVG
     /// - Parameter allowFixingMissingViewBox: allow the renderer to try adding a viewBox attribute to svg that are lacking of it.
     /// Without viewBox the renderer is unable to resize the svg image.
-    init(allowFixingMissingViewBox: Bool = true) {
-        self.allowFixingMissingViewBox = allowFixingMissingViewBox
+    init(options: Options = []) {
+        self.options = options
         super.init(frame: .zero, configuration: WebViewSVGRenderer.rendererConfiguration)
         navigationDelegate = self
         setValue(false, forKey: "drawsBackground")
@@ -50,7 +61,7 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        self.allowFixingMissingViewBox = true
+        self.options = []
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -130,7 +141,15 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
                 else {
                     throw SVGRenderingError.cgImageConversionFailed
                 }
-                let rep = NSBitmapImageRep(cgImage: resizedCGImage)
+                let rep: NSBitmapImageRep
+                if self.options.contains(.removePNGAlphaChannel) {
+                    guard let transformedImage = resizedCGImage.removingAlphaChannel() else {
+                        throw SVGRenderingError.alphaChannelRemovalFailed
+                    }
+                    rep = NSBitmapImageRep(cgImage: transformedImage)
+                } else {
+                    rep = NSBitmapImageRep(cgImage: resizedCGImage)
+                }
                 rep.size = self.inPixelSize
                 guard let data = rep.representation(using: .png, properties: [:]) else {
                     throw SVGRenderingError.pngImageConversionFailed
@@ -155,7 +174,7 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
 
         if svgElement.attribute(forName: "viewBox") == nil {
             if
-                allowFixingMissingViewBox,
+                !options.contains(.preventViewBoxFix),
                 let width = svgElement.attribute(forName: "width")?.stringValue.flatMap(Double.init),
                 let height = svgElement.attribute(forName: "height")?.stringValue.flatMap(Double.init)
             {

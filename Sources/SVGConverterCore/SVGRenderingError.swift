@@ -11,6 +11,7 @@ public enum SVGRenderingError: Error {
     case renderingAlreadyInProgress
     case invalidSVGData
     case cgImageConversionFailed
+    case alphaChannelRemovalFailed
     case pngImageConversionFailed
     case invalidState
 }
@@ -27,6 +28,8 @@ public extension SVGRenderingError {
             return "The SVG data is malformed"
         case .cgImageConversionFailed:
             return "Internal error, conversion to cgImage failed"
+        case .alphaChannelRemovalFailed:
+            return "Internal error, failed to remove alpha channel from the generated image"
         case .pngImageConversionFailed:
             return "Internal error, getting png representation from cgImage failed"
         case .invalidState:
