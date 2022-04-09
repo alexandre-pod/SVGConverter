@@ -47,6 +47,20 @@ struct SVGConverter: AsyncParsableCommand {
         let pngData = try await renderer.render(svgData: svgData, size: CGSize(width: width, height: height))
         try pngData.write(to: outputPath)
     }
+
+    // ???: (Alexandre Podlewski) 09/04/2022 On some setups the async run function is not called and cause the
+    //      help to be the only output of calling the command.
+    func run() throws {
+        Task {
+            do {
+                try await self.run()
+                Self.exit(withError: nil)
+            } catch {
+                Self.exit(withError: error)
+            }
+        }
+        RunLoop.main.run()
+    }
 }
 
 func logWarning(_ warning: SVGRenderingWarnings) {
