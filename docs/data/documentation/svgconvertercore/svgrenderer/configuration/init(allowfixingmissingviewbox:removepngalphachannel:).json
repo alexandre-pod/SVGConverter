@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "No overview available.",
+      "text" : "Create a configuration for SVGRenderer",
       "type" : "text"
     }
   ],
@@ -9,40 +9,65 @@
     "paths" : [
       [
         "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer"
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration"
       ]
     ]
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration"
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/init(allowFixingMissingViewBox:removePNGAlphaChannel:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:16SVGConverterCore11SVGRendererC13ConfigurationV",
+    "externalID" : "s:16SVGConverterCore11SVGRendererC13ConfigurationV25allowFixingMissingViewBox21removePNGAlphaChannelAESb_Sbtcfc",
     "fragments" : [
       {
-        "kind" : "keyword",
-        "text" : "struct"
+        "kind" : "identifier",
+        "text" : "init"
       },
       {
         "kind" : "text",
-        "text" : " "
+        "text" : "("
       },
       {
-        "kind" : "identifier",
-        "text" : "Configuration"
+        "kind" : "externalParam",
+        "text" : "allowFixingMissingViewBox"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "removePNGAlphaChannel"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
       }
     ],
     "modules" : [
       {
         "name" : "SVGConverterCore"
-      }
-    ],
-    "navigatorTitle" : [
-      {
-        "kind" : "identifier",
-        "text" : "Configuration"
       }
     ],
     "platforms" : [
@@ -55,9 +80,9 @@
       }
     ],
     "role" : "symbol",
-    "roleHeading" : "Structure",
-    "symbolKind" : "struct",
-    "title" : "SVGRenderer.Configuration"
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(allowFixingMissingViewBox:removePNGAlphaChannel:)"
   },
   "primaryContentSections" : [
     {
@@ -72,20 +97,69 @@
           "tokens" : [
             {
               "kind" : "keyword",
-              "text" : "struct"
+              "text" : "init"
             },
             {
               "kind" : "text",
-              "text" : " "
+              "text" : "("
             },
             {
-              "kind" : "identifier",
-              "text" : "Configuration"
+              "kind" : "externalParam",
+              "text" : "allowFixingMissingViewBox"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : " = true, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "removePNGAlphaChannel"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : " = false)"
             }
           ]
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Controls wether or not the renderer will try to add viewBox attribute to SVG without one",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "allowFixingMissingViewBox"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -96,25 +170,10 @@
   "sections" : [
 
   ],
-  "topicSections" : [
-    {
-      "identifiers" : [
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/init(allowFixingMissingViewBox:removePNGAlphaChannel:)"
-      ],
-      "title" : "Initializers"
-    },
-    {
-      "identifiers" : [
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/allowFixingMissingViewBox",
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/removePNGAlphaChannel"
-      ],
-      "title" : "Instance Properties"
-    }
-  ],
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/svgconvertercore\/svgrenderer\/configuration"
+        "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/init(allowfixingmissingviewbox:removepngalphachannel:)"
       ],
       "traits" : [
         {
@@ -198,43 +257,6 @@
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration"
 },
-"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration/allowFixingMissingViewBox": {
-  "abstract" : [
-    {
-      "text" : "Controls wether or not the renderer will try to add viewBox attribute to SVG without one",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "allowFixingMissingViewBox"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    }
-  ],
-  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/allowFixingMissingViewBox",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "allowFixingMissingViewBox",
-  "type" : "topic",
-  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/allowfixingmissingviewbox"
-},
 "doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration/init(allowFixingMissingViewBox:removePNGAlphaChannel:)": {
   "abstract" : [
     {
@@ -292,43 +314,6 @@
   "title" : "init(allowFixingMissingViewBox:removePNGAlphaChannel:)",
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/init(allowfixingmissingviewbox:removepngalphachannel:)"
-},
-"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/Configuration/removePNGAlphaChannel": {
-  "abstract" : [
-    {
-      "text" : "When this is true the renderer will produce an image without alpha channel",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "var"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "removePNGAlphaChannel"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    }
-  ],
-  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/Configuration\/removePNGAlphaChannel",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "removePNGAlphaChannel",
-  "type" : "topic",
-  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/configuration\/removepngalphachannel"
 }
 }
 }

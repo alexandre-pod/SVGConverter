@@ -15,11 +15,11 @@
   },
   "identifier" : {
     "interfaceLanguage" : "swift",
-    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:)"
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:)"
   },
   "kind" : "symbol",
   "metadata" : {
-    "externalID" : "s:16SVGConverterCore11SVGRendererC6render7svgData4size5scale10Foundation0F0VAJ_So6CGSizeV0B8Graphics7CGFloatVtYaKF",
+    "externalID" : "s:16SVGConverterCore11SVGRendererC6render7svgData4size10Foundation0F0VAI_So6CGSizeVtYaKF",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -69,23 +69,6 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
-      },
-      {
-        "kind" : "externalParam",
-        "text" : "scale"
-      },
-      {
-        "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-        "text" : "CGFloat"
-      },
-      {
-        "kind" : "text",
         "text" : ") "
       },
       {
@@ -127,7 +110,7 @@
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",
-    "title" : "render(svgData:size:scale:)"
+    "title" : "render(svgData:size:)"
   },
   "primaryContentSections" : [
     {
@@ -188,24 +171,7 @@
             },
             {
               "kind" : "text",
-              "text" : ", "
-            },
-            {
-              "kind" : "externalParam",
-              "text" : "scale"
-            },
-            {
-              "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-              "text" : "CGFloat"
-            },
-            {
-              "kind" : "text",
-              "text" : " = 1.0) "
+              "text" : ") "
             },
             {
               "kind" : "keyword",
@@ -255,7 +221,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The size of the PNG returned by this method",
+                  "text" : "The size in pixel of the PNG returned by this method",
                   "type" : "text"
                 }
               ],
@@ -263,20 +229,6 @@
             }
           ],
           "name" : "size"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A multiplicator for the size of the output PNG",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "scale"
         }
       ]
     }
@@ -292,7 +244,7 @@
   "variants" : [
     {
       "paths" : [
-        "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:scale:)"
+        "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:)"
       ],
       "traits" : [
         {
@@ -345,7 +297,7 @@
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderer"
 },
-"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:scale:)": {
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:)": {
   "abstract" : [
     {
       "text" : "Transform SVG Data to PNG data",
@@ -401,23 +353,6 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "scale"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
-    },
-    {
-      "kind" : "text",
       "text" : ") "
     },
     {
@@ -442,12 +377,12 @@
       "text" : "Data"
     }
   ],
-  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:)",
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "render(svgData:size:scale:)",
+  "title" : "render(svgData:size:)",
   "type" : "topic",
-  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:scale:)"
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:)"
 }
 }
 }

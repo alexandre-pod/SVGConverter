@@ -95,6 +95,16 @@
       "kind" : "declarations"
     }
   ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/SVGConverterCore\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 2,
@@ -124,8 +134,8 @@
     },
     {
       "identifiers" : [
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:)",
-        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:completion:)"
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:)",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:completion:)"
       ],
       "title" : "Instance Methods"
     },
@@ -327,7 +337,7 @@
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderer\/init(configuration:warninghandler:)"
 },
-"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:scale:)": {
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:)": {
   "abstract" : [
     {
       "text" : "Transform SVG Data to PNG data",
@@ -380,23 +390,6 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "c:@S@CGSize",
       "text" : "CGSize"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "scale"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
     },
     {
       "kind" : "text",
@@ -424,14 +417,14 @@
       "text" : "Data"
     }
   ],
-  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:)",
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "render(svgData:size:scale:)",
+  "title" : "render(svgData:size:)",
   "type" : "topic",
-  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:scale:)"
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:)"
 },
-"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:scale:completion:)": {
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/render(svgData:size:completion:)": {
   "abstract" : [
     {
       "text" : "Transform SVG Data to PNG data",
@@ -484,23 +477,6 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "c:@S@CGSize",
       "text" : "CGSize"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "scale"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:12CoreGraphics7CGFloatV",
-      "text" : "CGFloat"
     },
     {
       "kind" : "text",
@@ -551,12 +527,12 @@
       "text" : ")"
     }
   ],
-  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:scale:completion:)",
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderer\/render(svgData:size:completion:)",
   "kind" : "symbol",
   "role" : "symbol",
-  "title" : "render(svgData:size:scale:completion:)",
+  "title" : "render(svgData:size:completion:)",
   "type" : "topic",
-  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:scale:completion:)"
+  "url" : "\/documentation\/svgconvertercore\/svgrenderer\/render(svgdata:size:completion:)"
 },
 "doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderer/warningHandler-swift.property": {
   "abstract" : [
@@ -615,6 +591,11 @@
   "title" : "warningHandler",
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderer\/warninghandler-swift.property"
+},
+"doc://SVGConverterCore/s8SendableP": {
+  "identifier" : "doc:\/\/SVGConverterCore\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
 }
 }
 }

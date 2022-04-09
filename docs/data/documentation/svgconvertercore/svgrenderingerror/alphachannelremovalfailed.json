@@ -1,0 +1,166 @@
+{
+  "abstract" : [
+    {
+      "text" : "No overview available.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/alphaChannelRemovalFailed"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16SVGConverterCore17SVGRenderingErrorO25alphaChannelRemovalFailedyA2CmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "alphaChannelRemovalFailed"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "SVGConverterCore"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "SVGRenderingError.alphaChannelRemovalFailed"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "alphaChannelRemovalFailed"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/svgconvertercore\/svgrenderingerror\/alphachannelremovalfailed"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://SVGConverterCore/documentation/SVGConverterCore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "SVGConverterCore",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderingError"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SVGRenderingError"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "SVGRenderingError",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/alphaChannelRemovalFailed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alphaChannelRemovalFailed"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/alphaChannelRemovalFailed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.alphaChannelRemovalFailed",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/alphachannelremovalfailed"
+}
+}
+}

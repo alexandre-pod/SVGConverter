@@ -102,6 +102,7 @@
   "topicSections" : [
     {
       "identifiers" : [
+        "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/alphaChannelRemovalFailed",
         "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/cgImageConversionFailed",
         "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidSVGData",
         "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/invalidState",
@@ -212,6 +213,31 @@
   "title" : "Error Implementations",
   "type" : "topic",
   "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/error-implementations"
+},
+"doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/alphaChannelRemovalFailed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alphaChannelRemovalFailed"
+    }
+  ],
+  "identifier" : "doc:\/\/SVGConverterCore\/documentation\/SVGConverterCore\/SVGRenderingError\/alphaChannelRemovalFailed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "SVGRenderingError.alphaChannelRemovalFailed",
+  "type" : "topic",
+  "url" : "\/documentation\/svgconvertercore\/svgrenderingerror\/alphachannelremovalfailed"
 },
 "doc://SVGConverterCore/documentation/SVGConverterCore/SVGRenderingError/cgImageConversionFailed": {
   "abstract" : [
