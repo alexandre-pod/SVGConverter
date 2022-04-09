@@ -79,12 +79,8 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
         }
         isRendering = true
         self.completion = completion
-        let webViewScale = layer?.contentsScale ?? 1
         self.inPixelSize = size
-        self.inPointSize = NSSize(
-            width: size.width / webViewScale,
-            height: size.height / webViewScale
-        )
+        self.inPointSize = self.convertFromBacking(size)
         do {
             let resizedSVGData = try resizeSVG(svgData, to: self.inPointSize)
             guard let svgString = String(data: resizedSVGData, encoding: .utf8) else {
@@ -119,8 +115,6 @@ final class WebViewSVGRenderer: WKWebView, WKNavigationDelegate {
             )
         )
 
-        webView.layer?.contentsScale = 1.0
-        webView.layer?.rasterizationScale = 0.1
         webView.frame.size = config.rect.size
         webView.takeSnapshot(with: config) { [weak self] image, error in
             guard let self = self else { return }

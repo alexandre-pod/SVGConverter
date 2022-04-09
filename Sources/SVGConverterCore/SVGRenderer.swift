@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 
 @available(macOS 10.15, *)
 @MainActor
@@ -51,6 +52,7 @@ public final class SVGRenderer {
 
     // MARK: - Private Properties
 
+    private let rendererWindow: NSWindow
     private let renderer: WebViewSVGRenderer
 
     // MARK: - Life cycle
@@ -69,6 +71,14 @@ public final class SVGRenderer {
             options.insert(.removePNGAlphaChannel)
         }
         self.renderer = WebViewSVGRenderer(options: options)
+
+        // ???: (Alexandre Podlewski) 09/04/2022 Without forcing the backing scale factor it is not possible to control
+        //      the output of screeshoting the web view. Without window issues could also occurred when changing of
+        //      focused screen with a different scale factor. An issue occurred when focused on a x1 screen, with
+        //      the webview outside of a window it had a default backing scale factor of x2 but the snapshot was taken
+        //      as x1, this causing invalid size generated images.
+        self.rendererWindow = PixelScaleWindow()
+        self.rendererWindow.contentView = self.renderer
 
         self.warningHandler = warningHandler
         self.renderer.warningHandler = warningHandler
